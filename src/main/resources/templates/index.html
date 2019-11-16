@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Spring Boot - Angularjs Example</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="/js/controller.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+</head>
+<body>
+ 	<div class="container" ng-app="app">
+		1<div ng-controller="postcontroller">
+			2<div class="col-sm-8 col-md-4 text-right">
+				3<div class="form-group">
+					<div class="input-group">
+						<input class="form-control" *ngIf="flag" type="text"
+							ngModel="location" name="location" (keyup)="submitForm()" (keyup)="post2mongo() funtion3()" id="location"/>
+						<ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
+						     <li class="list-group-items" ng-repeat="locname in filterLocation">{{locname}}</li>
+						</ul>
+					</div>
+			 <!--  3</div>
+			  	3<div class="search-result" *ngIf="flag">
+					<ul>
+						<li *ngFor="let loc of locations | async"><a
+							(click)="onselectLocation(loc)">{{loc.userId}}</a></li>
+					</ul>
+				3</div>
+				3<div>
+					<select class="form-control" id="LocationName"
+						ngModel="LocationName" name="LocationName">
+						<option *ngFor="let loc of locations">{{loc.userId}}</option>
+					</select>
+				3</div>
+
+				4<select id="locationName" (change)="post2mongo()">
+					<option value="0">--All--</option>
+					<option *ngFor="let loc of locations" value={{loc}}>
+						{{loc}}</option>
+				4</select>-->
+				<select name="dropDown" id="dropDownList"></select>
+				
+			3</div>
+
+			<div class="col-sm-offset-2 col-sm-10">
+				<p>{{postResultMessage}}</p>
+			</div>
+           </div>
+		1</div>
+	</div>
+</body>
+</html>
